@@ -119,7 +119,9 @@ namespace GoogleAnalyticsConsumer.Business
                         OperatingSystem= Convert.ToString(row[1]),
                         DeviceCategory = Convert.ToString(row[2]),
                         DataTime = DateTime.ParseExact(Convert.ToString(row[3]), "yyyyMMdHHmm", System.Globalization.CultureInfo.InvariantCulture),
-                        Data = Convert.ToString(row[4]),
+                        Country = Convert.ToString(row[4]),
+                        City = Convert.ToString(row[5]),
+                        Data = Convert.ToString(row[6]),
                         Created = DateTime.Now
                     });
                 }

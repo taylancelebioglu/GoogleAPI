@@ -14,9 +14,7 @@ namespace GoogleAnalyticsConsumer.Data
         public string PagePath { get; set; }
         [MaxLength(500)]
         public string Data { get; set; }
-        [MaxLength(100)]
         public string City { get; set; }
-        [MaxLength(100)]
         public string Country { get; set; }
         public DateTime DataTime { get; set; }
         public DateTime Created { get; set; }

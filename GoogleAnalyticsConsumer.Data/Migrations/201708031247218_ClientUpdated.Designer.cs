@@ -7,13 +7,13 @@ namespace GoogleAnalyticsConsumer.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class CountryCity_Updated : IMigrationMetadata
+    public sealed partial class ClientUpdated : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CountryCity_Updated));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ClientUpdated));
         
         string IMigrationMetadata.Id
         {
-            get { return "201708031129097_CountryCity_Updated"; }
+            get { return "201708031247218_ClientUpdated"; }
         }
         
         string IMigrationMetadata.Source
