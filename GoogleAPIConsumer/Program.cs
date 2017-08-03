@@ -20,8 +20,6 @@ namespace GoogleAPIConsumer
         string azureStorageConn = "DefaultEndpointsProtocol=https;AccountName=googleanalyticsrole;AccountKey=3+xWpeQRWx0C3SG8XCutUX4Fwb6dbdY9a3L+M+wNS/t+MOPYOzuDux0QjgHJ3kyS/DnmfF5GfrejFSxZ/+CO6g==;EndpointSuffix=core.windows.net";
         static void Main(string[] args)
         {
-            RequestSimulator sim = new RequestSimulator();
-            sim.ExcuteRequests();
             Console.WriteLine("Working...");
             // Query
             // https://developers.google.com/analytics/devguides/reporting/core/dimsmets

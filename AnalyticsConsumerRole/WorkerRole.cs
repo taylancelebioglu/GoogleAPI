@@ -86,7 +86,6 @@ namespace AnalyticsConsumerRole
                         {
                             viewsRep.Insert(p);
                         });
-                        viewsRep.DbContext.SaveChanges();
                     }
                     if (pageUniqueViews.Count > 0)
                     {
@@ -96,7 +95,6 @@ namespace AnalyticsConsumerRole
                         {
                             uniqueRep.Insert(p);
                         });
-                        uniqueRep.DbContext.SaveChanges();
                     }
                     if (pageViewsDuration.Count > 0)
                     {
@@ -106,7 +104,6 @@ namespace AnalyticsConsumerRole
                         {
                             durationRep.Insert(p);
                         });
-                        durationRep.DbContext.SaveChanges();
                     }
                     if (clients.Count > 0)
                     {
@@ -116,19 +113,11 @@ namespace AnalyticsConsumerRole
                         {
                             clientsRep.Insert(p);
                         });
-                        clientsRep.DbContext.SaveChanges();
                     }
                 }
                 catch (Exception ex)
                 {
                     Trace.TraceInformation(string.Format("Error:{0}", ex.Message));
-                }
-                finally
-                {
-                    viewsRep.Dispose();
-                    uniqueRep.Dispose();
-                    durationRep.Dispose();
-                    clientsRep.Dispose();
                 }
                 Console.WriteLine("Waiting for 5 minutes");
                 await Task.Delay(300000);
