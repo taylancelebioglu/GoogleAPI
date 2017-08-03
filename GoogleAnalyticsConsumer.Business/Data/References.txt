@@ -1,0 +1,7 @@
+﻿http://www.c-sharpcorner.com/UploadFile/f9f215/how-to-fetch-google-analytics-statistics-and-display-it-in-y/
+
+https://developers.google.com/analytics/devguides/reporting/core/dimsmets
+
+https://console.developers.google.com/iam-admin/serviceaccounts/project?project=dm-analytics-test
+
+http://analyticswebtest-digitalmarketing.azurewebsites.net/ 

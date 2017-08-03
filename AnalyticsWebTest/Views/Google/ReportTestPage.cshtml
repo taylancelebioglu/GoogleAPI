@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "ReportTestPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Report Test Page</h2>
+
+Validating Hits - Measurement Protocol
+
+This document describes how to validate Google Analytics Measurement Protocol hits.
+
+Overview
+
+The Google Analytics Measurement Protocol does not return HTTP error codes, even if a Measurement Protocol hit is malformed or missing required parameters. To ensure that your hits are correctly formatted and contain all required parameters, you can test them against the validation server before deploying them to production.
+
+This guide describes the process for sending hits to the Measurement Protocol Validation Server and explains how to interpret the response.
+
+The Measurement Protocol Hit Builder, a tool that allows you to interactively construct and validate Measurement Protocol hits, uses this validation server.
+Sending hits for validation
+
+Hits can be sent to the Measurement Protocol Validation Server via any method currently supported by the Measurement Protocol. The only difference is the URL. To send hits to the Measurement Protocol Validation Server use the endpoint /debug/collect instead of /collect. The follow example shows an invalid hit sent to the Measurement Protocol Validation Server:
+
+https://www.google-analytics.com/debug/collect?tid=fake&v=1
+For more details on how to construct a Measurement Protocol hit, see the protocol reference.

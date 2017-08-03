@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="GoogleAnalyticsConsumer.AzureService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="5" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="AnalyticsConsumerRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=googleanalyticsrole;AccountKey=3+xWpeQRWx0C3SG8XCutUX4Fwb6dbdY9a3L+M+wNS/t+MOPYOzuDux0QjgHJ3kyS/DnmfF5GfrejFSxZ/+CO6g==;EndpointSuffix=core.windows.net" />
+      <Setting name="DbContextConnection" value="Server=tcp:myserverrenault.database.windows.net,1433;Initial Catalog=GoogleAnalyticsTest;Persist Security Info=False;User ID=innova;Password=developer123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="taylan" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEEdK3fJDRsikRfjHRYN2g2wwDQYJKoZIhvcNAQEBBQAEggEAFm1l5nVi/wImeNk/stk4tWSDnclKxmFRLu6k0iV+V4X2S+/SLq+ncKTf0Qne9h9vZsXwAfObA3fVs+u4wKZwvt5n5LEj7Z4Yi3+1GAucx6nfHYUVj/uZGzPLgEU5TKPnL6Ifsq1UyBY8Ei5VOB0pTNJZ8OMy0wqjPEJyZx1BDrpgupAXDzplx6MhTQ9eqgJ5QPdoGNqziS3slfzgbQoZTpX75YfNEaMb/siQEKyer7BbXkm+3jTEdybUosiNY6LgqZFKLhzJxKukDr8XZizyr4vQ7EmXGkyCLV/SKJSVACtNdvWOi78zNPoaWilOWBjVPrn/6w+VqTiVVVzKdotxhDAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECLo3vv3S65ePgBB3SKmAPNe+UhtJQKrvEDNT" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2018-06-23T23:59:59.0000000+03:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="50DAB38A975487BC78922A45A5653466F84E2E94" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="RequestSimulator">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="taylan" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEEdK3fJDRsikRfjHRYN2g2wwDQYJKoZIhvcNAQEBBQAEggEAFm1l5nVi/wImeNk/stk4tWSDnclKxmFRLu6k0iV+V4X2S+/SLq+ncKTf0Qne9h9vZsXwAfObA3fVs+u4wKZwvt5n5LEj7Z4Yi3+1GAucx6nfHYUVj/uZGzPLgEU5TKPnL6Ifsq1UyBY8Ei5VOB0pTNJZ8OMy0wqjPEJyZx1BDrpgupAXDzplx6MhTQ9eqgJ5QPdoGNqziS3slfzgbQoZTpX75YfNEaMb/siQEKyer7BbXkm+3jTEdybUosiNY6LgqZFKLhzJxKukDr8XZizyr4vQ7EmXGkyCLV/SKJSVACtNdvWOi78zNPoaWilOWBjVPrn/6w+VqTiVVVzKdotxhDAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECLo3vv3S65ePgBB3SKmAPNe+UhtJQKrvEDNT" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2018-06-23T23:59:59.0000000+03:00" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="50DAB38A975487BC78922A45A5653466F84E2E94" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

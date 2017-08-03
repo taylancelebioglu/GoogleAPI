@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleAPIConsumer", "GoogleAPIConsumer\GoogleAPIConsumer.csproj", "{92B5DE90-71AE-4C11-9B8F-F5A2815EA9E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalyticsWebTest", "AnalyticsWebTest\AnalyticsWebTest.csproj", "{4BB7BD84-E6F7-4E3C-8628-3A22436454FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleAnalyticsConsumer.Data", "GoogleAnalyticsConsumer.Data\GoogleAnalyticsConsumer.Data.csproj", "{23E56F3B-5012-4503-87CC-2537D2ACFFE7}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "GoogleAnalyticsConsumer.AzureService", "GoogleAnalyticsConsumer.AzureService\GoogleAnalyticsConsumer.AzureService.ccproj", "{B1BB85C9-2BDE-4A49-AED6-CDCB29A49C8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalyticsConsumerRole", "AnalyticsConsumerRole\AnalyticsConsumerRole.csproj", "{2238124A-6BA5-44CB-A3EE-97036AE082FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleAnalyticsConsumer.Business", "GoogleAnalyticsConsumer.Business\GoogleAnalyticsConsumer.Business.csproj", "{D703A84F-9614-4B68-BAFA-551637C1F153}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestSimulator", "RequestSimulator\RequestSimulator.csproj", "{067FA4AE-CDC2-4A26-ABD2-51B26637D492}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92B5DE90-71AE-4C11-9B8F-F5A2815EA9E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92B5DE90-71AE-4C11-9B8F-F5A2815EA9E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92B5DE90-71AE-4C11-9B8F-F5A2815EA9E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92B5DE90-71AE-4C11-9B8F-F5A2815EA9E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB7BD84-E6F7-4E3C-8628-3A22436454FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB7BD84-E6F7-4E3C-8628-3A22436454FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB7BD84-E6F7-4E3C-8628-3A22436454FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB7BD84-E6F7-4E3C-8628-3A22436454FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23E56F3B-5012-4503-87CC-2537D2ACFFE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23E56F3B-5012-4503-87CC-2537D2ACFFE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23E56F3B-5012-4503-87CC-2537D2ACFFE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23E56F3B-5012-4503-87CC-2537D2ACFFE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1BB85C9-2BDE-4A49-AED6-CDCB29A49C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1BB85C9-2BDE-4A49-AED6-CDCB29A49C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1BB85C9-2BDE-4A49-AED6-CDCB29A49C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1BB85C9-2BDE-4A49-AED6-CDCB29A49C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2238124A-6BA5-44CB-A3EE-97036AE082FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2238124A-6BA5-44CB-A3EE-97036AE082FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2238124A-6BA5-44CB-A3EE-97036AE082FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2238124A-6BA5-44CB-A3EE-97036AE082FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D703A84F-9614-4B68-BAFA-551637C1F153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D703A84F-9614-4B68-BAFA-551637C1F153}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D703A84F-9614-4B68-BAFA-551637C1F153}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D703A84F-9614-4B68-BAFA-551637C1F153}.Release|Any CPU.Build.0 = Release|Any CPU
+		{067FA4AE-CDC2-4A26-ABD2-51B26637D492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{067FA4AE-CDC2-4A26-ABD2-51B26637D492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{067FA4AE-CDC2-4A26-ABD2-51B26637D492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{067FA4AE-CDC2-4A26-ABD2-51B26637D492}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
