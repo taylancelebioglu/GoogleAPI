@@ -12,6 +12,10 @@ namespace GoogleAnalyticsConsumer.Data
         public string OperatingSystem { get; set; }
         [MaxLength(100)]
         public string DeviceCategory { get; set; }
+        [MaxLength(100)]
+        public string City { get; set; }
+        [MaxLength(100)]
+        public string Country { get; set; }
         [MaxLength(500)]
         public string Data { get; set; }
         public DateTime DataTime { get; set; }

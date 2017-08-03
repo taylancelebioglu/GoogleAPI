@@ -137,6 +137,14 @@
     <Compile Include="Migrations\201706071039576_CreatedAdded.Designer.cs">
       <DependentUpon>201706071039576_CreatedAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708031002134_CountryCity_Added.cs" />
+    <Compile Include="Migrations\201708031002134_CountryCity_Added.Designer.cs">
+      <DependentUpon>201708031002134_CountryCity_Added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708031129097_CountryCity_Updated.cs" />
+    <Compile Include="Migrations\201708031129097_CountryCity_Updated.Designer.cs">
+      <DependentUpon>201708031129097_CountryCity_Updated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\IEntity.cs" />
@@ -163,6 +171,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706071039576_CreatedAdded.resx">
       <DependentUpon>201706071039576_CreatedAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708031002134_CountryCity_Added.resx">
+      <DependentUpon>201708031002134_CountryCity_Added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708031129097_CountryCity_Updated.resx">
+      <DependentUpon>201708031129097_CountryCity_Updated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

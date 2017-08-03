@@ -57,6 +57,11 @@ namespace AnalyticsConsumerRole
         {
             while (!cancellationToken.IsCancellationRequested)
             {
+                PageViewsRepository viewsRep = new PageViewsRepository();
+                PageViewUniqueRepository uniqueRep = new PageViewUniqueRepository();
+                PageViewsDurationRepository durationRep = new PageViewsDurationRepository();
+                ClientsRepository clientsRep = new ClientsRepository();
+
                 try
                 {
                     Trace.TraceInformation("Starting requests");
@@ -67,16 +72,11 @@ namespace AnalyticsConsumerRole
                     var pageViewsDuration = service.GetPageViewsDurationData();
                     var clients = service.GetClientsData();
                     Trace.TraceInformation("Requests are completed");
-
-                    PageViewsRepository viewsRep = new PageViewsRepository();
-                    PageViewUniqueRepository uniqueRep = new PageViewUniqueRepository();
-                    PageViewsDurationRepository durationRep = new PageViewsDurationRepository();
-                    ClientsRepository clientsRep = new ClientsRepository();
-
-                    DateTime lastPageViewData = viewsRep.GetLast();
-                    DateTime lastUniqueData = uniqueRep.GetLast();
-                    DateTime lastDurationData = durationRep.GetLast();
-                    DateTime lastClientData = clientsRep.GetLast();
+                    
+                    DateTime lastPageViewData = viewsRep.GetLastRecordDate();
+                    DateTime lastUniqueData = uniqueRep.GetLastRecordDate();
+                    DateTime lastDurationData = durationRep.GetLastRecordDate();
+                    DateTime lastClientData = clientsRep.GetLastRecordDate();
 
                     if (pageViews.Count > 0)
                     {
@@ -86,6 +86,7 @@ namespace AnalyticsConsumerRole
                         {
                             viewsRep.Insert(p);
                         });
+                        viewsRep.DbContext.SaveChanges();
                     }
                     if (pageUniqueViews.Count > 0)
                     {
@@ -95,6 +96,7 @@ namespace AnalyticsConsumerRole
                         {
                             uniqueRep.Insert(p);
                         });
+                        uniqueRep.DbContext.SaveChanges();
                     }
                     if (pageViewsDuration.Count > 0)
                     {
@@ -104,6 +106,7 @@ namespace AnalyticsConsumerRole
                         {
                             durationRep.Insert(p);
                         });
+                        durationRep.DbContext.SaveChanges();
                     }
                     if (clients.Count > 0)
                     {
@@ -113,11 +116,19 @@ namespace AnalyticsConsumerRole
                         {
                             clientsRep.Insert(p);
                         });
+                        clientsRep.DbContext.SaveChanges();
                     }
                 }
                 catch (Exception ex)
                 {
                     Trace.TraceInformation(string.Format("Error:{0}", ex.Message));
+                }
+                finally
+                {
+                    viewsRep.Dispose();
+                    uniqueRep.Dispose();
+                    durationRep.Dispose();
+                    clientsRep.Dispose();
                 }
                 Console.WriteLine("Waiting for 5 minutes");
                 await Task.Delay(300000);

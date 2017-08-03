@@ -60,7 +60,7 @@ namespace GoogleAnalyticsConsumer.Business
                DateTime.Today.AddDays(-1).ToString("yyyy-MM-dd"),
                DateTime.Today.ToString("yyyy-MM-dd"),
                "ga:pageviews");
-            request.Dimensions = "ga:pageTitle,ga:pagePathLevel1,ga:pagePath,ga:dateHourMinute";
+            request.Dimensions = "ga:pageTitle,ga:pagePathLevel1,ga:pagePath,ga:dateHourMinute,ga:country,ga:city";
             request.Sort = "-ga:dateHourMinute";
 
             var data = request.Execute();
@@ -73,7 +73,7 @@ namespace GoogleAnalyticsConsumer.Business
                DateTime.Today.AddDays(-1).ToString("yyyy-MM-dd"),
                DateTime.Today.ToString("yyyy-MM-dd"),
                "ga:uniquePageviews");
-            request2.Dimensions = "ga:pageTitle,ga:pagePathLevel1,ga:pagePath,ga:dateHourMinute";
+            request2.Dimensions = "ga:pageTitle,ga:pagePathLevel1,ga:pagePath,ga:dateHourMinute,ga:country,ga:city";
             request2.Sort = "-ga:dateHourMinute";
 
             var data2 = request2.Execute();
@@ -86,7 +86,7 @@ namespace GoogleAnalyticsConsumer.Business
               DateTime.Today.AddDays(-1).ToString("yyyy-MM-dd"),
               DateTime.Today.ToString("yyyy-MM-dd"),
               "ga:avgTimeOnPage");
-            request3.Dimensions = "ga:pageTitle,ga:pagePathLevel1,ga:pagePath,ga:dateHourMinute";
+            request3.Dimensions = "ga:pageTitle,ga:pagePathLevel1,ga:pagePath,ga:dateHourMinute,ga:country,ga:city";
             request3.Sort = "-ga:dateHourMinute";
 
             var data3 = request3.Execute();
@@ -99,7 +99,7 @@ namespace GoogleAnalyticsConsumer.Business
               DateTime.Today.AddDays(-1).ToString("yyyy-MM-dd"),
               DateTime.Today.ToString("yyyy-MM-dd"),
               "ga:sessions");
-            request4.Dimensions = "ga:browser,ga:operatingSystem,ga:deviceCategory,ga:dateHourMinute";
+            request4.Dimensions = "ga:browser,ga:operatingSystem,ga:deviceCategory,ga:dateHourMinute,ga:country,ga:city";
             request4.Sort = "-ga:dateHourMinute";
 
             var data4 = request4.Execute();
@@ -140,7 +140,11 @@ namespace GoogleAnalyticsConsumer.Business
                     entity.PagePathLevel = Convert.ToString(row[1]);
                     entity.PagePath = Convert.ToString(row[2]);
                     entity.DataTime = DateTime.ParseExact(Convert.ToString(row[3]), "yyyyMMdHHmm", System.Globalization.CultureInfo.InvariantCulture);
-                    entity.Data = Convert.ToString(row[4]);
+                    entity.Country = Convert.ToString(row[4]);
+                    entity.City = Convert.ToString(row[5]);
+
+                    //Allways last index is data.
+                    entity.Data = Convert.ToString(row[6]);
                     entity.Created = DateTime.Now;
                     result.Add(entity);
                 }
