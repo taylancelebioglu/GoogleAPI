@@ -3,8 +3,8 @@
   <Role name="AnalyticsConsumerRole">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
-      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=googleanalyticsrole;AccountKey=3+xWpeQRWx0C3SG8XCutUX4Fwb6dbdY9a3L+M+wNS/t+MOPYOzuDux0QjgHJ3kyS/DnmfF5GfrejFSxZ/+CO6g==;EndpointSuffix=core.windows.net" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=analyticsrole;AccountKey=$(_analyticsrole.key_)" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=analyticsrole;AccountKey=gotBb0+98Og33YvY54xjHSfclZEQ5cCisGqOdQR6isaTW4fOh1QQiTPW0S74k0fhX9u295WC3Zzt/DLCZhuP1w==;EndpointSuffix=core.windows.net" />
       <Setting name="DbContextConnection" value="Server=tcp:myserverrenault.database.windows.net,1433;Initial Catalog=GoogleAnalyticsTest;Persist Security Info=False;User ID=innova;Password=developer123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" />
       <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
       <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="taylan" />
